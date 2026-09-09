@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>服饰详情 · 华服千载</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-paper grain">
+  <div id="nav-slot"></div>
+
+  <header class="page-hero" style="min-height:46vh" id="page-hero">
+    <div class="page-hero-bg" id="hero-bg"></div>
+    <div class="page-hero-inner">
+      <nav class="breadcrumb">
+        <a href="index.html">序厅</a> / <a id="bc-dynasty" href="dynasty.html">朝代</a> / <span id="bc-name">⋯</span>
+      </nav>
+      <h1 id="g-name" style="font-size:clamp(44px,6.5vw,84px)">⋯</h1>
+      <div class="ph-en" id="g-en"></div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="detail-layout">
+      <figure class="detail-figure reveal">
+        <div class="frame">
+          <img id="g-img" src="" alt="">
+        </div>
+        <figcaption class="detail-caption" id="g-caption"></figcaption>
+      </figure>
+
+      <div class="label-card reveal reveal-d1">
+        <div class="label-head">
+          <div>
+            <div class="label-name" id="l-name">⋯</div>
+            <div class="label-en" id="l-en"></div>
+          </div>
+          <span class="seal square" id="l-seal" style="flex:none">珍<br>藏</span>
+        </div>
+
+        <dl class="label-dl">
+          <div class="label-row"><dt>朝代</dt><dd id="f-dynasty"></dd></div>
+          <div class="label-row"><dt>服属</dt><dd id="f-gender"></dd></div>
+          <div class="label-row"><dt>类别</dt><dd id="f-category"></dd></div>
+          <div class="label-row"><dt>材质</dt><dd id="f-material"></dd></div>
+          <div class="label-row"><dt>形制</dt><dd id="f-form"></dd></div>
+          <div class="label-row"><dt>色彩</dt><dd id="f-colors"></dd></div>
+        </dl>
+
+        <div class="label-desc">
+          <h3>历 史 背 景</h3>
+          <p id="f-desc"></p>
+        </div>
+
+        <div class="detail-nav">
+          <a class="btn-ghost" id="back-dynasty">← 返回朝代展厅</a>
+          <a class="btn-ghost" href="collection.html">全部馆藏 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="section-head reveal">
+      <div class="eyebrow">Same Dynasty · 同朝馆藏</div>
+      <h2 class="section-title" id="rel-title" style="font-size:clamp(26px,3vw,36px)">同 朝 馆 藏</h2>
+    </div>
+    <div class="garment-grid" id="rel-grid"></div>
+  </section>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/garment.js"></script>
+</body>
+</html>

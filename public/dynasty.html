@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>朝代展厅 · 华服千载</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-paper grain">
+  <div id="nav-slot"></div>
+
+  <header class="page-hero" id="page-hero">
+    <div class="page-hero-bg" id="hero-bg"></div>
+    <div class="page-hero-inner">
+      <nav class="breadcrumb">
+        <a href="index.html">序厅</a> / <a href="index.html#timeline">朝代</a> / <span id="bc-name">⋯</span>
+      </nav>
+      <h1 id="d-name">⋯</h1>
+      <div class="ph-en" id="d-en"></div>
+      <div class="ph-meta">
+        <span><b>年代</b><i id="d-years"></i></span>
+        <span><b>纪元</b><i id="d-era"></i></span>
+        <span><b>藏品</b><i id="d-count"></i> 件</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="dynasty-intro reveal" id="d-summary"></div>
+
+    <div class="filter-bar reveal" style="margin-top:64px">
+      <div class="filter-group" id="f-gender">
+        <span class="filter-label">性别</span>
+      </div>
+      <div class="filter-group" id="f-cat">
+        <span class="filter-label">类别</span>
+      </div>
+      <span class="result-count" id="result-count"></span>
+    </div>
+
+    <div class="garment-grid" id="garment-grid"></div>
+    <div class="empty" id="empty" style="display:none">
+      <span class="seal square">寻<br>珍</span>
+      <p>此筛选下暂无藏品</p>
+    </div>
+  </section>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/dynasty.js"></script>
+</body>
+</html>

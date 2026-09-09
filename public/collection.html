@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>馆藏检索 · 华服千载</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-paper grain">
+  <div id="nav-slot"></div>
+
+  <header class="page-hero" style="min-height:42vh">
+    <div class="page-hero-bg" style="background:linear-gradient(135deg,#2b241a,#1f1a13)"></div>
+    <div class="page-hero-inner">
+      <nav class="breadcrumb">
+        <a href="index.html">序厅</a> / 馆藏检索
+      </nav>
+      <h1 style="font-size:clamp(42px,6vw,80px)">馆 藏 检 索</h1>
+      <div class="ph-en">Search the Collection · 三十二件藏品 · 八朝衣冠</div>
+    </div>
+  </header>
+
+  <section class="section" id="search">
+    <div class="reveal" style="margin-bottom:52px">
+      <div class="eyebrow">Search · 寻珍</div>
+      <div class="search-box">
+        <input type="text" id="q" placeholder="输入名称、材质、色彩或关键词，如「丝绸」「龙」「裙」…" autocomplete="off">
+        <span class="search-ico">⌕</span>
+      </div>
+    </div>
+
+    <div class="filter-bar reveal">
+      <div class="filter-group" id="f-dynasty">
+        <span class="filter-label">朝代</span>
+      </div>
+    </div>
+    <div class="filter-bar reveal" style="margin-top:-28px">
+      <div class="filter-group" id="f-gender">
+        <span class="filter-label">性别</span>
+      </div>
+      <div class="filter-group" id="f-cat">
+        <span class="filter-label">类别</span>
+      </div>
+      <span class="result-count" id="result-count"></span>
+    </div>
+
+    <div class="garment-grid" id="grid"></div>
+    <div class="empty" id="empty" style="display:none">
+      <span class="seal square">未<br>遇</span>
+      <p>未寻得相符藏品，换个关键词试试</p>
+    </div>
+  </section>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/collection.js"></script>
+</body>
+</html>

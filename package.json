@@ -1,0 +1,17 @@
+{
+  "name": "hua-fu-qian-zai",
+  "version": "1.0.0",
+  "description": "华服千载 · 中国古代服饰数字展馆（Express + SQLite 全栈项目）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node db/seed.js"
+  },
+  "keywords": ["博物馆", "古代服饰", "数字展馆", "express", "sqlite"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.22.2"
+  }
+}

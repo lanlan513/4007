@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>华服千载 · 中国古代服饰数字展馆</title>
+  <meta name="description" content="一座具有博物馆质感的中国古代服饰数字展馆：沿时间轴纵览先秦至明清的衣冠之美。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-ink grain">
+  <div id="nav-slot"></div>
+
+  <!-- ── 序厅 HERO ── -->
+  <header class="hero">
+    <div class="hero-mountains"></div>
+    <div class="hero-mist"></div>
+    <div class="hero-seal seal square">千载<br>衣冠</div>
+    <div class="hero-vertical vertical">垂衣裳而天下治</div>
+    <div class="hero-inner">
+      <h1 class="hero-calli">华服千载<span class="dot"> ·</span></h1>
+      <div class="hero-latin">Costume Museum of Ancient China</div>
+      <div class="hero-tagline">先 秦 至 明 清 · 衣 冠 之 美 巡 礼</div>
+    </div>
+    <a href="#timeline" class="hero-scroll">入 馆</a>
+  </header>
+
+  <!-- ── 序 ── -->
+  <section class="section preface reveal">
+    <div class="eyebrow" style="justify-content:center">Prologue · 序</div>
+    <p class="preface-quote">
+      “黄帝、尧、舜，<em>垂衣裳而天下治</em>。”<br>
+      一部服饰史，便是一部华夏文明史。
+    </p>
+    <div class="preface-source">—— 《周易 · 系辞下》</div>
+    <p class="section-note" style="margin:34px auto 0;text-align:center">
+      衣冠之于华夏，从来不止于蔽体御寒。它是礼制的刻度、审美的镜子，也是民族交融的长卷。
+      本馆沿时间轴设八个展厅，择三十二件代表性服饰，从材质、形制、色彩与历史背景四个维度，
+      邀您细赏三千年针线里的中国。
+    </p>
+  </section>
+
+  <!-- ── 时间轴 ── -->
+  <section class="section" id="timeline">
+    <div class="section-head reveal">
+      <div class="eyebrow">Timeline · 时间轴</div>
+      <h2 class="section-title">八 朝 衣 冠</h2>
+      <p class="section-note">沿一条墨色长轴，自先秦步入晚清。点击任一朝代，进入该朝展厅。</p>
+    </div>
+
+    <div class="timeline-wrap reveal">
+      <div class="tl-line"></div>
+      <div class="timeline-track" id="tl-track"></div>
+      <p class="tl-hint">横向拖动长卷，徐徐展卷 <span class="arrow">→</span></p>
+    </div>
+  </section>
+
+  <!-- ── 馆藏撷珍 ── -->
+  <section class="section">
+    <div class="section-head reveal">
+      <div class="eyebrow">Selected Collection · 撷珍</div>
+      <h2 class="section-title">馆 藏 撷 珍</h2>
+      <p class="section-note">每朝择取一件，先睹为快；更多藏品请至<a href="collection.html" style="color:var(--gold-light);text-decoration:underline;text-underline-offset:6px">馆藏检索</a>。</p>
+    </div>
+    <div class="garment-grid" id="featured-grid"></div>
+  </section>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
