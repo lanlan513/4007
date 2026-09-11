@@ -25,8 +25,14 @@
     </div>
   </header>
 
-  <section class="section">
+  <section class="section hall" id="hall">
     <div class="dynasty-intro reveal" id="d-summary"></div>
+
+    <!-- 时间轴小导轨：八朝连续浏览 -->
+    <div class="journey reveal" id="journey">
+      <div class="journey-line"></div>
+      <div class="journey-rail" id="journey-rail"></div>
+    </div>
 
     <div class="filter-bar reveal" style="margin-top:64px">
       <div class="filter-group" id="f-gender">
@@ -43,6 +49,20 @@
       <span class="seal square">寻<br>珍</span>
       <p>此筛选下暂无藏品</p>
     </div>
+
+    <!-- 前后时期导航 -->
+    <nav class="era-nav" id="era-nav">
+      <a class="era-card era-prev" id="era-prev" href="#">
+        <span class="era-dir">‹ 前 一 朝</span>
+        <span class="era-name" id="prev-name"></span>
+        <span class="era-years" id="prev-years"></span>
+      </a>
+      <a class="era-card era-next" id="era-next" href="#">
+        <span class="era-dir">后 一 朝 ›</span>
+        <span class="era-name" id="next-name"></span>
+        <span class="era-years" id="next-years"></span>
+      </a>
+    </nav>
   </section>
 
   <div id="footer-slot"></div>

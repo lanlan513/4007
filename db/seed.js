@@ -55,7 +55,7 @@ const dynasties = [
     era: '三国 · 两晋 · 南北朝',
     theme: '#6d8a83',
     summary:
-      '乱世中的衣冠解放与民族大融合。玄学盛行，士族崇尚“褒衣博带”，大袖衫、杂裾垂髾飘逸若仙；北方游牧民族的袴褶、裲裆传入中原，胡汉服饰互相渗透，为盛唐服饰的开放气象埋下伏笔。',
+      '乱世中的衣冠解放与民族大融合。玄学盛行，士族崇尚“褒衣博带”，大袖衫、杂裾垂梢飘逸若仙；北方游牧民族的袴褶、两裆传入中原，胡汉服饰互相渗透，为盛唐服饰的开放气象埋下伏笔。',
     hero: HERO('Wei-Jin period Chinese literati gathering in bamboo grove, wide-sleeved loose robes, flowing ribbons, celadon tones, mist'),
   },
   {
@@ -66,7 +66,7 @@ const dynasties = [
     era: '隋 · 唐',
     theme: '#b0702f',
     summary:
-      '中国服饰最雍容开放的时代。男子首服幞头、身着圆领缺骻袍，以服色定品阶；女子流行齐胸襦裙，肩披披帛，袒胸装、半臂、胡服并尚，浓丽丰肥、气象万千。丝织印染技艺登峰造极，长安成为世界性的时尚之都。',
+      '中国服饰最雍容开放的时代。男子首服幞头、身着圆领缺胯袍，以服色定品阶；女子流行齐胸襦裙，肩披披帛，袒胸装、半臂、胡服并尚，浓丽丰肥、气象万千。丝织印染技艺登峰造极，长安成为世界性的时尚之都。',
     hero: HERO('prosperous Tang dynasty Chang-an street scene, noblewomen in high-waisted ruqun dresses with silk pibo shawls, golden light, peonies'),
   },
   {
@@ -203,12 +203,12 @@ const garments = [
     image: ART('a Wei-Jin dynasty Chinese woman in extremely wide-sleeved shan blouse, gauzy fabric billowing, long skirt, ethereal bamboo-grove literati aesthetic, carefree elegance'),
   },
   {
-    dynasty: 'weijin', name: '杂裾垂髾服', gender: '女', category: '礼服',
+    dynasty: 'weijin', name: '杂裾垂梢服', gender: '女', category: '礼服',
     material: '轻薄丝纱',
-    form: '襦裙制而加以“髾”——裙腰垂挂的三角形饰片，与长长飘带（襳）一同随风飞舞。',
+    form: '襦裙制而加以“梢”——裙腰垂挂的三角形饰片，与长长的丝质飘带“仙”一同随风飞舞。',
     colors: '浅绛、月白、鹅黄，层次轻盈',
     description:
-      '杂裾垂髾是魏晋南北朝最具仙气的女装：裙裾上剪出数个三角旗状的“髾”，两侧再缀以长长的丝质飘带“襳”，行步之时层层翻飞，如洛神凌波。顾恺之《洛神赋图》《列女仁智图》中仙女的装束，正是这种服饰的传世图像。',
+      '杂裾垂梢是魏晋南北朝最具仙气的女装：裙裾上剪出数个三角旗状的“梢”，两侧再缀以长长的丝质飘带“仙”，行步之时层层翻飞，如洛神凌波。顾恺之《洛神赋图》《列女仁智图》中仙女的装束，正是这种服饰的传世图像。',
     image: ART('a Wei-Jin Chinese noblewoman in zaju chuishao fairy dress, triangular silk flags and long streaming ribbons flying from her skirt waist, Goddess of Luo river style, ethereal'),
   },
   {
@@ -221,23 +221,23 @@ const garments = [
     image: ART('a Northern and Southern Dynasties Chinese soldier-cavalryman in kuxi outfit, short tight jacket xi and wide trousers tied at knees, leather boots, nomadic Han融合 style'),
   },
   {
-    dynasty: 'weijin', name: '裲裆', gender: '男女通用', category: '常服',
+    dynasty: 'weijin', name: '两裆', gender: '男女通用', category: '常服',
     material: '布帛、丝绵，亦有铁甲制者',
     form: '无袖无领的背心式衣服，仅前后两片，以襻带在肩部与腰间扣连，遮挡心背。',
     colors: '随内外搭配，本色素面为多',
     description:
-      '裲裆即“两当”，一片当胸、一片当背，源出军中的裲裆铠，南北朝时演变为男女通服的便装。妇女常将它罩在衫襦之外，或内纳绵絮作冬衣。这种背心式结构简洁实用，是后世半臂、比甲乃至今日马甲背心的远祖。',
+      '两裆即“两当”，一片当胸、一片当背，源出军中的两裆铠，南北朝时演变为男女通服的便装。妇女常将它罩在衫襦之外，或内纳绵絮作冬衣。这种背心式结构简洁实用，是后世半臂、比甲乃至今日马甲背心的远祖。',
     image: ART('a Northern Dynasties Chinese figure wearing liangdang sleeveless vest over a long robe, front and back panels connected at shoulders, simple practical nomadic-inspired garment'),
   },
 
   // ───────────────────────── 隋唐 ─────────────────────────
   {
-    dynasty: 'suitang', name: '圆领缺骻袍', gender: '男', category: '官服',
+    dynasty: 'suitang', name: '圆领缺胯袍', gender: '男', category: '官服',
     material: '绫、罗、绢等丝织物',
-    form: '圆领、窄袖、左右开衩（缺骻）的及膝长袍；头戴幞头，腰系銙带，足着乌皮靴。',
+    form: '圆领、窄袖、左右开衩（缺胯）的及膝长袍；头戴幞头，腰系革带，足着乌皮靴。',
     colors: '三品以上紫，五品以上绯，七品以上绿，九品以上青——“品色衣”',
     description:
-      '圆领袍是隋唐男子的核心装束，从帝王到庶民通服，以颜色区分官阶，即“品色衣”制度。幞头由鲜卑帽演变而来，软脚、硬脚样式屡变；腰间銙带挂算囊、刀子等七事。这套“幞头、圆领袍、銙带、长靴”的组合沿用至明，成为中国男子常服的经典范式。',
+      '圆领袍是隋唐男子的核心装束，从帝王到庶民通服，以颜色区分官阶，即“品色衣”制度。幞头由鲜卑帽演变而来，软脚、硬脚样式屡变；腰间革带挂算囊、刀子等七事。这套“幞头、圆领袍、革带、长靴”的组合沿用至明，成为中国男子常服的经典范式。',
     image: ART('a Tang dynasty Chinese official in round-collar quegua robe with side slits, black futo headcloth, leather belt with plaques, black leather boots, purple or crimson official color'),
   },
   {

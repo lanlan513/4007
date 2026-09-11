@@ -49,8 +49,17 @@
 
     <div class="timeline-wrap reveal">
       <div class="tl-line"></div>
+      <div class="tl-progress" id="tl-progress"></div>
       <div class="timeline-track" id="tl-track"></div>
-      <p class="tl-hint">横向拖动长卷，徐徐展卷 <span class="arrow">→</span></p>
+      <p class="tl-hint">横向拖动长卷，徐徐展卷 · 点卡片切换朝代，点轴珠入厅 <span class="arrow">→</span></p>
+    </div>
+
+    <!-- 朝代预览展柜：随轴上高亮节点切换 -->
+    <div class="tl-stage reveal" id="tl-stage" style="--theme:#476b5f">
+      <div class="tl-stage-bg" id="tl-stage-bg"></div>
+      <button class="tl-arrow tl-prev" id="tl-prev" type="button" aria-label="上一朝">‹</button>
+      <div class="tls-body" id="tls-body"></div>
+      <button class="tl-arrow tl-next" id="tl-next" type="button" aria-label="下一朝">›</button>
     </div>
   </section>
 
