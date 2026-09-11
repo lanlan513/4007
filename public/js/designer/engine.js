@@ -36,15 +36,21 @@ const shuffle = (arr) => {
   return a;
 };
 const eraNameOf = (id) => (ERA_NAMES[id] || id);
-const genderFit = (item, gender) =>
-  typeof item.gender === 'string' ? item.gender === '通' || item.gender === gender
-    : (item.genders || []).includes('通') || (item.genders || []).includes(gender);
-const roleFit = (item, role) => (item.roles || []).includes(role);
-const eraFit = (item, era) =>
-  Array.isArray(item.era) ? item.era.includes(era)
+const genderFit = (item, gender) => {
+  if (!item) return false;
+  if (typeof item.gender === 'string') return item.gender === '通' || item.gender === gender;
+  if (Array.isArray(item.genders)) return item.genders.includes('通') || item.genders.includes(gender);
+  return true; // 未标注性别者（如颜色）视为男女皆宜
+};
+const roleFit = (item, role) => !!item && (item.roles || []).includes(role);
+const eraFit = (item, era) => {
+  if (!item) return false;
+  return Array.isArray(item.era) ? item.era.includes(era)
     : item.eras ? item.eras.includes(era) : item.era === era;
+};
 const formMid = (item) =>
-  typeof item.form === 'number' ? item.form : (item.form[0] + item.form[1]) / 2;
+  !item ? null
+    : typeof item.form === 'number' ? item.form : (item.form[0] + item.form[1]) / 2;
 const formOK = (item, occasion) =>
   item.form == null ? true
     : typeof item.form === 'number' ? Math.abs(item.form - occasion) <= 1
@@ -99,6 +105,10 @@ const SYNERGIES = [
     text: '辫线袄束腰登皮靴，马上功夫利落' },
   { test: (c) => c.body.key === '袴褶' && c.sleeve?.id === 'sl-wan',
     text: '大口裤膝下绾结，袴褶急装，胡服骑射遗风' },
+  { test: (c) => c.body.key === '袴褶' && c.accessory?.id === 'a-xue',
+    text: '袴褶束结登皮靴，军中行止，马上如生' },
+  { test: (c) => c.body.key === '大袖衫' && c.accessory?.id === 'a-shan',
+    text: '宽衫大袖执麈尾，竹林名士放达之姿' },
   { test: (c) => c.body.key === '补服' && c.accessory?.id === 'a-wusha' && c.belt?.id === 'b-yu',
     text: '绯袍补子、乌纱玉带，大明衣冠最熟悉的模样' },
   { test: (c) => c.body.key === '飞鱼服' && c.accessory?.id === 'a-xiuchun',
@@ -120,6 +130,9 @@ const SYNERGIES = [
    ───────────────────────────────────────────── */
 function judgeBody(body, idn) {
   const reasons = [];
+  if (!body) {
+    return { score: 0, reasons: [{ t: 'warn', text: '尚未择定衣身' }] };
+  }
   if (body.era !== idn.era) {
     return { score: 0, reasons: [{ t: 'bad', text: `此「${body.key}」乃${eraNameOf(body.era)}衣式，置于${eraNameOf(idn.era)}，时代错位` }] };
   }
@@ -140,9 +153,11 @@ function judgeGeneric(item, label, idn, opts = {}) {
   if (!item) return { score: 1, skipped: true, reasons: [{ t: 'muted', text: '未施配饰，简素自持' }] };
   const reasons = [];
   const inEra = eraFit(item, idn.era);
+  const c = opts.choices || {};
 
   /* 僭越：帝王专用之色 / 章 */
-  if (item.royal && idn.role !== 'emperor') {
+  const yellowGrace = item === c.color && c.body?.key === '黄马褂'; // 明黄马褂本身即“赏穿”之恩
+  if (item.royal && idn.role !== 'emperor' && !yellowGrace) {
     return {
       score: 0,
       reasons: [
@@ -182,7 +197,7 @@ function evaluate(idn, c) {
   const slotJudges = {
     body: judgeBody(c.body, idn),
     sleeve: judgeGeneric(c.sleeve, '袖型', idn, { checkGender: true, occasion: c.body?.form ?? 3 }),
-    color: judgeGeneric(c.color, '颜色', idn, {}),
+    color: judgeGeneric(c.color, '颜色', idn, { choices: c }),
     pattern: judgeGeneric(c.pattern, '纹样', idn, { checkGender: true, occasion: c.body?.form ?? 3 }),
     belt: judgeGeneric(c.belt, '腰带', idn, { checkGender: true, occasion: c.body?.form ?? 3 }),
     accessory: judgeGeneric(c.accessory, '配饰', idn, { checkGender: true, occasion: c.body?.form ?? 3 }),
@@ -208,9 +223,12 @@ function evaluate(idn, c) {
   const col = c.color;
   if (col) {
     if (eraFit(col, idn.era)) colorScore += 20; else { colorScore -= 15; conflicts.push(`「${col.name}」非${eraNameOf(idn.era)}典型色`); }
-    if (col.royal && idn.role !== 'emperor') {
+    const yellowGrace = col.royal && c.body?.key === '黄马褂';
+    if (col.royal && idn.role !== 'emperor' && !yellowGrace) {
       colorScore = Math.min(colorScore, 25);
       conflicts.push(`「${col.name}」乃帝王独用之色，他人服用为僭越`);
+    } else if (yellowGrace) {
+      colorScore += 12; // 赏穿黄马褂，明黄即是恩荣本身
     } else if (roleFit(col, idn.role)) colorScore += 15;
     else colorScore -= 10;
 
@@ -246,7 +264,7 @@ function evaluate(idn, c) {
 
   /* ── 维度四：和谐（正式度 / 形制 / 成套） ── */
   let harmonyScore = 70;
-  const forms = [c.body?.form, c.sleeve && formMid(c.sleeve), c.pattern && formMid(c.pattern),
+  const forms = [c.body && formMid(c.body), c.sleeve && formMid(c.sleeve), c.pattern && formMid(c.pattern),
     c.belt && formMid(c.belt), c.accessory && formMid(c.accessory)].filter((x) => x != null);
   if (forms.length >= 3) {
     const spread = Math.max(...forms) - Math.min(...forms);
@@ -279,10 +297,13 @@ function evaluate(idn, c) {
     /* 裲裆本罩于衫外，宽袖大衫亦可，略宽容不扣分 */
   }
 
-  /* 成套彩蛋 */
-  const synergies = SYNERGIES.filter((s) => {
+  /* 成套彩蛋：仅当衣身合于时代、且着衣人身份相称时才算“成套”，
+     避免穿越僭越的混搭反获彩蛋 */
+  const coherent = c.body && c.body.era === idn.era &&
+    roleFit(c.body, idn.role) && genderFit(c.body, idn.gender);
+  const synergies = coherent ? SYNERGIES.filter((s) => {
     try { return s.test(c); } catch { return false; }
-  });
+  }) : [];
   harmonyScore = Math.max(6, Math.min(100, harmonyScore + synergies.length * 7));
 
   /* ── 总分：六槽 85 分 + 成套 15 分 ── */
@@ -345,13 +366,18 @@ const isYi = (item, idn) => item && eraFit(item, idn.era) && roleFit(item, idn.r
    考据挑战：出题
    ───────────────────────────────────────────── */
 function pickIdeal(list, idn, occasion, { genderRequired = true } = {}) {
-  const fit = list.filter((x) =>
-    eraFit(x, idn.era) && roleFit(x, idn.role) &&
-    (!genderRequired || genderFit(x, idn.gender)) && formOK(x, occasion));
-  const pool = fit.length ? fit : list.filter((x) =>
-    eraFit(x, idn.era) && roleFit(x, idn.role) && (!genderRequired || genderFit(x, idn.gender)));
-  const pool2 = pool.length ? pool : list.filter((x) => eraFit(x, idn.era));
-  return pick(pool2);
+  /* 分级取最优：先求全合（时代+身份+性别+正式度），逐级放宽并打散随机 */
+  const tiers = [
+    (x) => eraFit(x, idn.era) && roleFit(x, idn.role) &&
+           (!genderRequired || genderFit(x, idn.gender)) && formOK(x, occasion),
+    (x) => eraFit(x, idn.era) && roleFit(x, idn.role) && (!genderRequired || genderFit(x, idn.gender)),
+    (x) => eraFit(x, idn.era),
+  ];
+  for (const f of tiers) {
+    const pool = list.filter(f);
+    if (pool.length) return pick(shuffle(pool));
+  }
+  return pick(list);
 }
 
 function makeOptions(ideal, list, idn, { genderAware = true } = {}) {
