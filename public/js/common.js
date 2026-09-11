@@ -88,8 +88,8 @@ function navHTML(theme) {
     <ul class="nav-links">
       <li><a href="index.html">序厅</a></li>
       <li><a href="index.html#timeline">朝代</a></li>
-      <li><a href="collection.html">馆藏</a></li>
-      <li><a href="collection.html#search">检索</a></li>
+      <li><a href="collection.html">寻衣</a></li>
+      <li><a href="collection.html#browse">馆藏</a></li>
     </ul>
   </nav>`;
 }
