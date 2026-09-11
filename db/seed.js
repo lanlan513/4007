@@ -119,6 +119,8 @@ const garments = [
   // ───────────────────────── 先秦 ─────────────────────────
   {
     dynasty: 'preqin', name: '冕服', gender: '男', category: '礼服',
+    identity: '帝王、诸侯、卿大夫——周代最高祭服，垂旒与章纹之数随等级递减',
+    pattern: '十二章纹：日、月、星辰、山、龙、华虫、宗彝、藻、火、粉米、黼、黻，各有寓意',
     material: '丝帛、麻布，饰以五彩刺绣与织锦',
     form: '上衣下裳制。上衣玄色象征天，下裳纁色象征地；头戴冕冠，顶板前圆后方，垂旒以珠玉串成。',
     colors: '玄（赤黑）衣、纁（绛红）裳，配五彩章纹',
@@ -128,6 +130,8 @@ const garments = [
   },
   {
     dynasty: 'preqin', name: '玄端', gender: '男', category: '礼服',
+    identity: '士大夫、士人——朝祭、冠婚之礼服，天子燕居亦服',
+    pattern: '尚素不施纹绣，以方正剪裁与缁色缘边为饰',
     material: '玄色丝帛或细麻布',
     form: '上衣下裳制，衣袂与裳幅皆方正端直，故名“端”；束大带、着舄履。',
     colors: '玄（黑中扬赤）为正色，裳用素、黄或杂色',
@@ -137,6 +141,8 @@ const garments = [
   },
   {
     dynasty: 'preqin', name: '曲裾深衣', gender: '女', category: '常服',
+    identity: '贵族妇女，士庶女子亦服',
+    pattern: '领缘、袖缘镶织锦，楚地流行云纹、菱纹与凤鸟纹',
     material: '丝帛，边缘以织锦镶边',
     form: '上下连属制。衣襟接长为三角，穿时由前绕至背后缠束，即“续衽钩边”；衣袖宽大，下摆呈喇叭状。',
     colors: '以玄、绛、青、白为主，领缘袖缘饰锦',
@@ -146,6 +152,8 @@ const garments = [
   },
   {
     dynasty: 'preqin', name: '短襦裙', gender: '女', category: '常服',
+    identity: '自平民女子至贵族的日常便装',
+    pattern: '多素面，裙缘或饰织带与简单几何纹',
     material: '绢、纱等丝织物',
     form: '上衣下裳制。上穿短襦至腰，下着长裙以丝绦系束，即“上衣下裳”的女子便装。',
     colors: '襦色浅淡，裙色以红、紫为尚',
@@ -157,6 +165,8 @@ const garments = [
   // ───────────────────────── 秦汉 ─────────────────────────
   {
     dynasty: 'qinhan', name: '素纱襌衣', gender: '女', category: '礼服',
+    identity: '西汉贵族妇女——罩于锦袍之外的礼服',
+    pattern: '素面无纹，以方孔纱本身的细密肌理为饰',
     material: '素纱——未经染色的极细桑蚕丝方孔纱',
     form: '上下连属的交领右衽长衣，无衬里，即“襌衣”；轻薄如蝉翼，可罩于锦袍之外。',
     colors: '本白、素色',
@@ -166,6 +176,8 @@ const garments = [
   },
   {
     dynasty: 'qinhan', name: '曲裾袍', gender: '女', category: '常服',
+    identity: '贵族妇女、命妇',
+    pattern: '云气纹、茱萸纹、乘云绣，缘边织锦对比鲜明',
     material: '绢、罗、锦等丝织物，内填丝绵为袍',
     form: '深衣制长衣，衣襟接曲裾绕身而下，层层包裹；领口、袖口、下摆皆有缘边。',
     colors: '朱红、绛紫、青褐，缘边对比鲜明',
@@ -175,6 +187,8 @@ const garments = [
   },
   {
     dynasty: 'qinhan', name: '直裾袍（襜褕）', gender: '男', category: '常服',
+    identity: '士人、官吏日常与燕居之服',
+    pattern: '素色或暗纹织锦，缘边纯色',
     material: '厚绢或织锦，中纳绵絮',
     form: '深衣制长衣，衣襟直下而非绕身，裾缘垂直；内着裤，外束革带。',
     colors: '皂、绛、青、褐',
@@ -184,6 +198,8 @@ const garments = [
   },
   {
     dynasty: 'qinhan', name: '文官朝服（进贤冠）', gender: '男', category: '官服',
+    identity: '汉代文官——以进贤冠梁数与绶色辨别品级',
+    pattern: '袍身素色，印绶织彩，绶之织纹依品级而别',
     material: '皂色或绛色丝帛',
     form: '上衣下裳相连的袍服，外束绅带、佩双印与组绶；头戴进贤冠，以梁数区分贵贱。',
     colors: '皂衣、绛纱，印绶五色纷呈',
@@ -195,6 +211,8 @@ const garments = [
   // ───────────────────────── 魏晋南北朝 ─────────────────────────
   {
     dynasty: 'weijin', name: '大袖衫', gender: '女', category: '常服',
+    identity: '士族女子、贵妇',
+    pattern: '素纱为主，或织隐花暗纹，以飘逸轮廓取胜',
     material: '轻薄纱縠',
     form: '交领或对襟单衫，袖身阔大垂胡，无袖端约束；下配长裙，腰系围裳。',
     colors: '浅青、牙白、淡绯，清雅为主',
@@ -204,6 +222,8 @@ const garments = [
   },
   {
     dynasty: 'weijin', name: '杂裾垂髾服', gender: '女', category: '礼服',
+    identity: '贵族妇女、宫廷命妇的礼服',
+    pattern: '髾片镶锦缘，襳带织花，流行云气与凤鸟纹',
     material: '轻薄丝纱',
     form: '襦裙制而加以“髾”——裙腰垂挂的三角形饰片，与长长飘带（襳）一同随风飞舞。',
     colors: '浅绛、月白、鹅黄，层次轻盈',
@@ -213,6 +233,8 @@ const garments = [
   },
   {
     dynasty: 'weijin', name: '袴褶', gender: '男', category: '戎服',
+    identity: '军中将卒、仪仗卫士，民间男子亦作急装',
+    pattern: '素色为主，戎服或缀革带与金属饰件',
     material: '粗绢、麻布或皮革',
     form: '上衣下裤之制：上穿紧身短衣“褶”，下着大口裤“袴”，膝下以带子束扎，便于骑射行动。',
     colors: '玄、皂、赤等耐脏深色',
@@ -222,6 +244,8 @@ const garments = [
   },
   {
     dynasty: 'weijin', name: '裲裆', gender: '男女通用', category: '常服',
+    identity: '男女通服，自军士至庶民皆着',
+    pattern: '素面为本，军制裲裆铠则缀甲片',
     material: '布帛、丝绵，亦有铁甲制者',
     form: '无袖无领的背心式衣服，仅前后两片，以襻带在肩部与腰间扣连，遮挡心背。',
     colors: '随内外搭配，本色素面为多',
@@ -233,6 +257,8 @@ const garments = [
   // ───────────────────────── 隋唐 ─────────────────────────
   {
     dynasty: 'suitang', name: '圆领缺骻袍', gender: '男', category: '官服',
+    identity: '自帝王至庶民通服，以服色辨别官阶',
+    pattern: '初尚素色，后织团窠、联珠、宝相花纹',
     material: '绫、罗、绢等丝织物',
     form: '圆领、窄袖、左右开衩（缺骻）的及膝长袍；头戴幞头，腰系銙带，足着乌皮靴。',
     colors: '三品以上紫，五品以上绯，七品以上绿，九品以上青——“品色衣”',
@@ -242,6 +268,8 @@ const garments = [
   },
   {
     dynasty: 'suitang', name: '齐胸襦裙', gender: '女', category: '常服',
+    identity: '宫廷贵妇至士庶女子皆尚',
+    pattern: '缬染团花、蹙金绣、间色裙，石榴红最负盛名',
     material: '锦、罗、纱、缬染丝帛',
     form: '短襦或衫束于裙内，裙腰高束至胸腋以上，以锦带系结；肩绕长帛“披帛”，可加半臂。',
     colors: '石榴红、郁金黄、草绿、间色裙，浓丽明艳',
@@ -251,6 +279,8 @@ const garments = [
   },
   {
     dynasty: 'suitang', name: '袆衣', gender: '女', category: '礼服',
+    identity: '皇后——受册、助祭、朝会的最高礼服',
+    pattern: '深青地遍织五彩翟（雉鸡）纹，行列成对',
     material: '深色织锦，施以五彩翟纹织成',
     form: '上下连属的深青色礼服，遍织翟（雉鸡）纹为章，配素纱中单、蔽膝，首戴花树冠、饰两博鬓。',
     colors: '深青（绀）地，五彩翟纹',
@@ -260,6 +290,8 @@ const garments = [
   },
   {
     dynasty: 'suitang', name: '半臂', gender: '女', category: '常服',
+    identity: '男女皆尚，女子多罩于襦衫之外',
+    pattern: '联珠纹、团窠纹、对鸟对兽等西域风织锦',
     material: '锦、绫等较厚实丝织物',
     form: '短袖及肘的对襟或套头上衣，长至腰际，罩于襦衫之外；男子亦有穿者。',
     colors: '织锦半臂以联珠纹、团窠纹为贵',
@@ -271,6 +303,8 @@ const garments = [
   // ───────────────────────── 宋 ─────────────────────────
   {
     dynasty: 'song', name: '褙子', gender: '女', category: '常服',
+    identity: '后妃至市井女子通服，男子亦有着者',
+    pattern: '衣身素色或暗纹，缘边印金、刺绣花卉',
     material: '罗、绫、纱，边缘以印金或刺绣缘饰',
     form: '对襟、直领、窄袖的长外衣，衣身修长过膝，两侧腋下开高衩，不施纽襻、任其敞开。',
     colors: '淡蓝、牙白、藕色、浅褐等低饱和色',
@@ -280,6 +314,8 @@ const garments = [
   },
   {
     dynasty: 'song', name: '襕衫', gender: '男', category: '官服',
+    identity: '士人、新科进士与官员的常服',
+    pattern: '素面无纹，以下摆横襕为识',
     material: '细白布或皂色罗',
     form: '圆领、大袖、下摆施一横“襕”的长衫，以象征上衣下裳之古制；腰束丝绦，头戴幞头或巾。',
     colors: '白衣举子、皂色官员，下摆横襕为识',
@@ -289,6 +325,8 @@ const garments = [
   },
   {
     dynasty: 'song', name: '大袖', gender: '女', category: '礼服',
+    identity: '后妃、命妇——册封、婚礼等大礼所服',
+    pattern: '金绣云凤、缠枝花卉，霞帔绣禽鸟随品级而别',
     material: '罗、绫，配金绣',
     form: '两袖阔大的对襟长衣，配长裙、霞帔，首戴珠翠团冠；内以“兜子”收纳双手。',
     colors: '青、绯、紫按命妇等级',
@@ -298,6 +336,8 @@ const garments = [
   },
   {
     dynasty: 'song', name: '直裰', gender: '男', category: '常服',
+    identity: '文人、僧道居家燕处之便服',
+    pattern: '素净无纹，不施雕饰',
     material: '素色布帛或细罗',
     form: '交领、长身、两侧开衩的便服，无横襕；腰间束绦，头戴巾子或东坡巾。',
     colors: '皂、白、青灰，素净为常',
@@ -309,6 +349,8 @@ const garments = [
   // ───────────────────────── 元 ─────────────────────────
   {
     dynasty: 'yuan', name: '质孙服', gender: '男', category: '礼服',
+    identity: '皇帝与宗王、近侍——诈马宴上君臣同服一色',
+    pattern: '纳石失织金：缠枝、云龙、宝相花，缀珠翠金宝',
     material: '纳石失（织金锦）、缀大珠的名贵丝料',
     form: '上衣连下裳、窄袖、腰间密密打作细褶的一体式袍服，首戴钹笠冠或七宝重顶冠。',
     colors: '一色成章——每次宴会君臣同服一种颜色',
@@ -318,6 +360,8 @@ const garments = [
   },
   {
     dynasty: 'yuan', name: '辫线袄', gender: '男', category: '戎服',
+    identity: '皇帝、近侍、卫士与乐工',
+    pattern: '腰间辫线细褶与肩背穗子为饰',
     material: '绢、锦，腰部分以丝线辫缝',
     form: '窄袖紧身短袄，腰间以红帛拈线密辫成横向细褶（腰线），下裳束入裤靴；肩背常缀辫线穗子。',
     colors: '辫线多为红、紫，袄身随品给赐',
@@ -327,6 +371,8 @@ const garments = [
   },
   {
     dynasty: 'yuan', name: '答忽（皮袍）', gender: '男', category: '常服',
+    identity: '蒙古君臣冬服，汉人士庶亦效之',
+    pattern: '皮毛本色，以金缘镶边为贵',
     material: '貂鼠、羊皮等毛皮，或以丝锦作面',
     form: '对襟、短袖或无袖的外罩长皮袄，罩于长袍之外，皮毛朝里或翻缘出锋；束腰、着靴。',
     colors: '玄、皂、褐，金缘为贵',
@@ -336,6 +382,8 @@ const garments = [
   },
   {
     dynasty: 'yuan', name: '罟罟冠', gender: '女', category: '礼服',
+    identity: '蒙古贵族妇女——冠饰轻重直接标示身份高低',
+    pattern: '珠翠花钿、金箔饰件，顶插雉尾翠花',
     material: '桦树皮、铁丝为骨，外蒙青毡或红绢，饰珠翠花钿',
     form: '高耸两三尺的柱状冠，顶呈方形或花簇状，插雉尾、翠花；配合宽大的袍服穿着。',
     colors: '青、红为主，金珠点缀',
@@ -347,6 +395,8 @@ const garments = [
   // ───────────────────────── 明 ─────────────────────────
   {
     dynasty: 'ming', name: '补服', gender: '男', category: '官服',
+    identity: '文武官员——补子文禽武兽辨别九品',
+    pattern: '补子：文官仙鹤、锦鸡、孔雀等禽鸟，武官狮、虎、豹等走兽',
     material: '苎丝、绫罗等丝织物',
     form: '圆领、大袖的盘领袍，胸背前后各缀一方“补子”；头戴乌纱帽，腰束玉带。',
     colors: '一至四品绯，五至七品青，八九品绿；补子文禽武兽',
@@ -356,6 +406,8 @@ const garments = [
   },
   {
     dynasty: 'ming', name: '飞鱼服', gender: '男', category: '官服',
+    identity: '锦衣卫堂上官、大内近侍——非特赐不得服',
+    pattern: '飞鱼纹：蟒首鱼尾、四爪有翼，遍织全身',
     material: '大红织锦或妆花罗',
     form: '交领或直领的曳撒式袍，全身织成飞鱼纹——蟒首、鱼身、有翼鱼尾；配绣春刀、鸾带。',
     colors: '大红地金纹为上',
@@ -365,6 +417,8 @@ const garments = [
   },
   {
     dynasty: 'ming', name: '凤冠霞帔', gender: '女', category: '礼服',
+    identity: '后妃、命妇的最高礼服；民间女子出嫁可借服一日',
+    pattern: '凤冠点翠龙凤珠花，霞帔绣云霞禽鸟随夫、子品级而变',
     material: '漆竹丝冠胎点翠饰金龙金凤，霞帔以织金锦罗制成',
     form: '凤冠以点翠、珠花、金龙金凤与珠滴组成；霞帔为两条绣满云霞禽鸟的长帛，自肩披绕、末端坠金坠子；配大红大袖袍。',
     colors: '点翠蓝、金、朱红',
@@ -374,6 +428,8 @@ const garments = [
   },
   {
     dynasty: 'ming', name: '马面裙', gender: '女', category: '常服',
+    identity: '命妇至民间女子皆服',
+    pattern: '裙襕织金妆花：花鸟、龙云、璎珞纹',
     material: '缎、绸、织金妆花',
     form: '裙门重叠、两侧打褶的裙式：前后各有一段光面无褶的“马面”，裙襕织绣花鸟龙云；上配竖领长袄。',
     colors: '大红、宝蓝、墨绿，裙襕金彩辉煌',
@@ -385,6 +441,8 @@ const garments = [
   // ───────────────────────── 清 ─────────────────────────
   {
     dynasty: 'qing', name: '明黄龙袍', gender: '男', category: '礼服',
+    identity: '皇帝独占——一般庆典所着吉服',
+    pattern: '九龙纹、十二章，间以祥云、蝠寿与海水江崖纹',
     material: '明黄妆花缎、缂丝，绣金线',
     form: '右衽大襟、马蹄袖的长袍，列十二章纹，龙纹九龙（身见五龙）；领、袖俱石青色，缘海龙皮边。',
     colors: '明黄为皇帝独占，石青缘边，金线龙纹',
@@ -394,6 +452,8 @@ const garments = [
   },
   {
     dynasty: 'qing', name: '补褂（清代补服）', gender: '男', category: '官服',
+    identity: '文武官员——顶戴花翎与补子共辨品级',
+    pattern: '补子文禽武兽，较明代略小、对襟分作两半',
     material: '石青色绸、缎',
     form: '对襟、短于袍、袖端平的外褂，胸背缀补子；内穿蟒袍，颈挂朝珠，头戴顶戴花翎。',
     colors: '石青为常，顶戴分红、蓝、白、金，花翎分单眼双眼三眼',
@@ -403,6 +463,8 @@ const garments = [
   },
   {
     dynasty: 'qing', name: '旗装（衬衣 · 氅衣）', gender: '女', category: '常服',
+    identity: '旗人妇女的日常装束',
+    pattern: '多重镶滚花边（晚清有“十八镶”之称），刺绣花卉蝶鸟',
     material: '绸缎纱罗，四季换料，多刺绣花边',
     form: '圆领、大襟右衽、宽身直筒的长袍：衬衣无开衩为内搭，氅衣左右开衩、缘多重滚边为外罩；梳两把头、穿花盆底鞋。',
     colors: '晚清尚藕荷、湖蓝、月白，镶边繁复',
@@ -412,6 +474,8 @@ const garments = [
   },
   {
     dynasty: 'qing', name: '黄马褂', gender: '男', category: '戎服',
+    identity: '御前侍卫之“职任褂子”，或行围、军功特赏之服',
+    pattern: '明黄素面或暗纹织花，以服色本身为最高标识',
     material: '明黄色纱或绸',
     form: '对襟、平袖、长至胯下的短褂，行袍之外罩穿；骑马行服之制。',
     colors: '明黄——与天子同色，非赏穿不得用',
@@ -444,9 +508,11 @@ function init() {
       name TEXT NOT NULL,
       gender TEXT NOT NULL,
       category TEXT NOT NULL,
+      identity TEXT,
       material TEXT,
       form TEXT,
       colors TEXT,
+      pattern TEXT,
       description TEXT,
       image TEXT
     );
@@ -457,8 +523,8 @@ function init() {
      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
   );
   const insG = db.prepare(
-    `INSERT INTO garments (dynasty_id, name, gender, category, material, form, colors, description, image)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
+    `INSERT INTO garments (dynasty_id, name, gender, category, identity, material, form, colors, pattern, description, image)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   );
 
   dynasties.forEach((d, i) =>
@@ -466,7 +532,7 @@ function init() {
   );
   let count = 0;
   for (const g of garments) {
-    insG.run(g.dynasty, g.name, g.gender, g.category, g.material, g.form, g.colors, g.description, g.image);
+    insG.run(g.dynasty, g.name, g.gender, g.category, g.identity, g.material, g.form, g.colors, g.pattern, g.description, g.image);
     count++;
   }
 

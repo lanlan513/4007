@@ -13,8 +13,18 @@ async function initHome() {
   /* 时间轴 */
   const track = document.getElementById('tl-track');
   track.innerHTML = dynasties
-    .map(
-      (d, i) => `
+    .map((d, i) => {
+      const minis = garments
+        .filter((g) => g.dynasty_id === d.id)
+        .map(
+          (g) => `
+        <div class="tl-mini" data-href="garment.html?id=${g.id}" title="${esc(g.name)} · 点击查看详情">
+          <img src="${esc(g.image)}" alt="${esc(g.name)}" loading="lazy">
+          <span>${esc(g.name)}</span>
+        </div>`
+        )
+        .join('');
+      return `
     <div class="tl-station" data-id="${esc(d.id)}">
       <div class="tl-index">${cnNum[i] || i + 1} · ${String(i + 1).padStart(2, '0')}</div>
       <div class="tl-node" style="--theme:${esc(d.theme)}"></div>
@@ -22,10 +32,11 @@ async function initHome() {
         <div class="tl-name">${esc(d.name)}</div>
         <div class="tl-en">${esc(d.name_en)}</div>
         <div class="tl-years">${esc(d.years)}<br>${esc(d.era)}</div>
+        <div class="tl-minis">${minis}</div>
         <div class="tl-enter">入 厅 观 览 →</div>
       </div>
-    </div>`
-    )
+    </div>`;
+    })
     .join('');
 
   track.querySelectorAll('.tl-station').forEach((st) => {
@@ -33,6 +44,14 @@ async function initHome() {
       location.href = `dynasty.html?id=${st.dataset.id}`;
     });
   });
+  /* 服饰小卡：直达详情页（不触发朝代跳转） */
+  track.querySelectorAll('.tl-mini').forEach((mini) => {
+    mini.addEventListener('click', (e) => {
+      e.stopPropagation();
+      location.href = mini.dataset.href;
+    });
+  });
+  track.querySelectorAll('.tl-mini img').forEach(fadeInImg);
 
   /* 撷珍：每朝取第一件 */
   const seen = new Set();

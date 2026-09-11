@@ -50,8 +50,8 @@ function fadeInImg(img) {
   else img.addEventListener('load', () => img.classList.add('loaded'), { once: true });
 }
 
-/* 服饰卡片 HTML */
-function garmentCard(g, i = 0) {
+/* 服饰卡片 HTML（reason 可选：关联理由标签，如「同属礼服」） */
+function garmentCard(g, i = 0, reason = '') {
   return `
   <article class="g-card reveal reveal-d${(i % 4) + 1}" data-href="garment.html?id=${g.id}">
     <div class="g-img">
@@ -64,6 +64,7 @@ function garmentCard(g, i = 0) {
       <div class="g-tags">
         <span class="tag cinnabar">${esc(g.category)}</span>
         <span class="tag">${esc(g.gender)}</span>
+        ${reason ? `<span class="tag gold">${esc(reason)}</span>` : ''}
       </div>
     </div>
   </article>`;

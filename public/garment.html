@@ -20,11 +20,15 @@
     </div>
   </header>
 
+  <!-- ── 总览：大图 + 展签 ── -->
   <section class="section">
     <div class="detail-layout">
       <figure class="detail-figure reveal">
-        <div class="frame">
+        <div class="frame" id="main-frame" title="点击放大细观">
           <img id="g-img" src="" alt="">
+          <button class="zoom-btn" id="zoom-open" type="button" aria-label="放大查看">
+            <span class="zoom-ico">⤢</span>放 大 细 观
+          </button>
         </div>
         <figcaption class="detail-caption" id="g-caption"></figcaption>
       </figure>
@@ -40,16 +44,14 @@
 
         <dl class="label-dl">
           <div class="label-row"><dt>朝代</dt><dd id="f-dynasty"></dd></div>
+          <div class="label-row"><dt>类型</dt><dd id="f-category"></dd></div>
+          <div class="label-row"><dt>适用身份</dt><dd id="f-identity"></dd></div>
           <div class="label-row"><dt>服属</dt><dd id="f-gender"></dd></div>
-          <div class="label-row"><dt>类别</dt><dd id="f-category"></dd></div>
-          <div class="label-row"><dt>材质</dt><dd id="f-material"></dd></div>
-          <div class="label-row"><dt>形制</dt><dd id="f-form"></dd></div>
-          <div class="label-row"><dt>色彩</dt><dd id="f-colors"></dd></div>
         </dl>
 
-        <div class="label-desc">
-          <h3>历 史 背 景</h3>
-          <p id="f-desc"></p>
+        <div class="label-tip">
+          <span class="label-tip-seal">观</span>
+          <p>下方「毫厘之观」可移动放大镜察局部，「服饰志」分区详述形制、材质、色彩、纹样与历史背景。</p>
         </div>
 
         <div class="detail-nav">
@@ -60,13 +62,99 @@
     </div>
   </section>
 
+  <!-- ── 局部细节：放大镜观察 ── -->
   <section class="section" style="padding-top:0">
     <div class="section-head reveal">
-      <div class="eyebrow">Same Dynasty · 同朝馆藏</div>
-      <h2 class="section-title" id="rel-title" style="font-size:clamp(26px,3vw,36px)">同 朝 馆 藏</h2>
+      <div class="eyebrow">Details · 局部细节</div>
+      <h2 class="section-title">毫 厘 之 观</h2>
+      <p class="section-note">在图上移动放大镜细察衣纹肌理，或点选右侧观察点，由整体形制深入局部特点。</p>
+    </div>
+
+    <div class="zoom-layout reveal">
+      <div class="lens-stage">
+        <div class="lens-box" id="lens-box">
+          <img id="lens-img" src="" alt="">
+          <div class="lens" id="lens"></div>
+        </div>
+        <div class="lens-hint" id="lens-hint">移 动 放 大 镜 · 细 察 局 部</div>
+      </div>
+
+      <aside class="lens-side">
+        <div class="focus-chips" id="focus-chips"></div>
+        <div class="focus-panel">
+          <h3><span class="focus-no" id="focus-no"></span><span id="focus-title"></span></h3>
+          <p id="focus-text"></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ── 服饰志：信息分区 ── -->
+  <section class="section" style="padding-top:0">
+    <div class="section-head reveal">
+      <div class="eyebrow">Record · 服饰志</div>
+      <h2 class="section-title">服 饰 志</h2>
+      <p class="section-note">分四个门类记录本件服饰的形制结构、材质工艺、色彩纹样与历史背景。</p>
+    </div>
+
+    <div class="record-grid">
+      <div class="record-card reveal">
+        <span class="record-no">壹</span>
+        <h3>形制与结构</h3>
+        <p id="r-form"></p>
+      </div>
+      <div class="record-card reveal reveal-d1">
+        <span class="record-no">贰</span>
+        <h3>材质与工艺</h3>
+        <p id="r-material"></p>
+      </div>
+      <div class="record-card reveal reveal-d2">
+        <span class="record-no">叁</span>
+        <h3>色彩与纹样</h3>
+        <p><b class="p-label">色彩</b><span id="r-colors"></span></p>
+        <p><b class="p-label">纹样</b><span id="r-pattern"></span></p>
+      </div>
+      <div class="record-card reveal reveal-d3">
+        <span class="record-no">肆</span>
+        <h3>历史背景</h3>
+        <p id="r-desc"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 同朝代服饰 ── -->
+  <section class="section" style="padding-top:0">
+    <div class="section-head reveal">
+      <div class="eyebrow">Same Dynasty · 同朝代服饰</div>
+      <h2 class="section-title" id="same-title" style="font-size:clamp(26px,3vw,36px)">同 朝 代 服 饰</h2>
+      <p class="section-note">与本件同出一朝的馆藏服饰，可对照观览。</p>
+    </div>
+    <div class="garment-grid" id="same-grid"></div>
+  </section>
+
+  <!-- ── 相关服饰 ── -->
+  <section class="section" style="padding-top:0">
+    <div class="section-head reveal">
+      <div class="eyebrow">Related · 相关服饰</div>
+      <h2 class="section-title" style="font-size:clamp(26px,3vw,36px)">相 关 服 饰</h2>
+      <p class="section-note">依类别与服属的关联，自他朝馆藏中择取可对照之服。</p>
     </div>
     <div class="garment-grid" id="rel-grid"></div>
   </section>
+
+  <!-- ── 放大灯箱 ── -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lb-caption" id="lb-caption"></div>
+    <div class="lb-stage" id="lb-stage">
+      <img id="lb-img" src="" alt="">
+    </div>
+    <div class="lb-tools">
+      <button type="button" id="lb-zoom-out" aria-label="缩小">－</button>
+      <button type="button" id="lb-reset" class="lb-reset">复 位</button>
+      <button type="button" id="lb-zoom-in" aria-label="放大">＋</button>
+      <button type="button" id="lb-close" aria-label="关闭">✕</button>
+    </div>
+  </div>
 
   <div id="footer-slot"></div>
 
