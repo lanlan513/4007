@@ -18,6 +18,7 @@ if (!fs.existsSync(dbFile)) {
 
 app.use(express.json());
 app.use('/api', require('./routes/api'));
+app.use('/api', require('./routes/game'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // 页面路由（友好 URL）
@@ -25,6 +26,7 @@ const pages = {
   '/dynasty': 'dynasty.html',
   '/garment': 'garment.html',
   '/collection': 'collection.html',
+  '/designer': 'designer.html',
 };
 for (const [route, file] of Object.entries(pages)) {
   app.get(route, (req, res) => res.sendFile(path.join(__dirname, 'public', file)));

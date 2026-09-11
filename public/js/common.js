@@ -90,6 +90,7 @@ function navHTML(theme) {
       <li><a href="index.html#timeline">朝代</a></li>
       <li><a href="collection.html">馆藏</a></li>
       <li><a href="collection.html#search">检索</a></li>
+      <li><a href="designer.html">雅集</a></li>
     </ul>
   </nav>`;
 }

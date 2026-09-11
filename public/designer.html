@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>华服设计局 · 华服千载</title>
+  <meta name="description" content="化身古代服饰设计师：择朝代、选身份，从馆藏中搭配衣身袖色纹带饰，生成专属设计卡；亦可挑战历史考据，检验你的衣冠学问。">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/designer.css">
+</head>
+<body class="theme-paper grain">
+  <div id="nav-slot"></div>
+
+  <header class="page-hero" style="min-height:46vh">
+    <div class="page-hero-bg" id="hero-bg"
+      style="background:linear-gradient(135deg,#2b241a,#24332c 60%,#1f1a13)"></div>
+    <div class="page-hero-inner">
+      <nav class="breadcrumb">
+        <a href="index.html">序厅</a> / 华服设计局
+      </nav>
+      <h1 style="font-size:clamp(42px,6.4vw,86px)">华 服 设 计 局</h1>
+      <div class="ph-en">Atelier of Ancient Chinese Costume · 量 体 裁 衣 · 考 古 搭 配</div>
+      <div class="ph-meta">
+        <span><b>取材</b><i>八朝馆藏 · 三十二件服饰</i></span>
+        <span><b>玩法</b><i>自由设计 / 历史考据挑战</i></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+
+    <!-- 模式切换 -->
+    <div class="at-tabs reveal" id="mode-tabs">
+      <button class="at-tab active" data-mode="gate">雅 集 入 口</button>
+      <button class="at-tab" data-mode="free">自 由 设 计</button>
+      <button class="at-tab" data-mode="challenge">考 据 挑 战</button>
+    </div>
+
+    <!-- ── 入口 ── -->
+    <div class="view active" id="view-gate">
+      <div class="section-head reveal" style="margin-bottom:36px">
+        <div class="eyebrow">Choose Your Game · 择帖入局</div>
+        <h2 class="section-title" style="font-size:clamp(28px,3.6vw,40px)">今 日 想 如 何 针 线 ？</h2>
+        <p class="section-note">组件库皆拆解自本馆藏品：衣身为馆藏原物，袖型、色彩、纹样、腰带、配饰取自各朝考述。先选玩法，再展针线。</p>
+      </div>
+      <div class="at-gate">
+        <div class="at-gate-card reveal" id="gate-free">
+          <span class="seal square at-gate-seal">裁<br>衣</span>
+          <div class="at-gate-idx">Game I · 壹</div>
+          <h3 class="at-gate-name">自由设计</h3>
+          <div class="at-gate-en">Free Design Studio</div>
+          <p class="at-gate-desc">
+            任选朝代与人物身份，从衣身、袖型、颜色、纹样、腰带、配饰六槽自由组合——
+            跨朝混搭亦无不可。完成后获「时代 · 身份 · 色彩 · 和谐」四维评价，
+            并生成一张可下载的专属服饰设计卡。
+          </p>
+          <div class="at-gate-tags">
+            <span class="tag">自由搭配</span>
+            <span class="tag">四维评价</span>
+            <span class="tag">设计卡下载</span>
+          </div>
+          <div class="at-gate-go">开 帖 裁 衣</div>
+        </div>
+
+        <div class="at-gate-card reveal reveal-d1" id="gate-challenge">
+          <span class="seal square at-gate-seal" style="background:var(--jade)">考<br>据</span>
+          <div class="at-gate-idx">Game II · 贰</div>
+          <h3 class="at-gate-name">历史考据挑战</h3>
+          <div class="at-gate-en">Historical Authenticity Challenge</div>
+          <p class="at-gate-desc">
+            随机出题：一个朝代、一个人物身份。每槽仅四个选项，其中藏着时代错位、
+            身份僭越、性别张冠李戴的干扰项。配完全装，按考据程度逐项打分，
+            附逐格搭配解析——看看你能否进「尚衣局」。
+          </p>
+          <div class="at-gate-tags">
+            <span class="tag">随机出题</span>
+            <span class="tag">四选一定夺</span>
+            <span class="tag">逐项解析评级</span>
+          </div>
+          <div class="at-gate-go">抽 签 应 考</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 自由设计 · 第一步：场景 ── -->
+    <div class="view" id="view-free-setup">
+      <div class="at-steps reveal">
+        <span class="at-step active" id="step-setup"><span class="n">1</span>择朝代身份</span>
+        <span class="at-step-line"></span>
+        <span class="at-step" id="step-design"><span class="n">2</span>量体裁衣</span>
+        <span class="at-step-line"></span>
+        <span class="at-step" id="step-card"><span class="n">3</span>钤印成卡</span>
+      </div>
+
+      <div class="at-scenario reveal">
+        <div class="at-block">
+          <div class="at-block-label">一 · 择 朝 代</div>
+          <div class="at-dynasty-grid" id="era-grid"></div>
+        </div>
+        <div class="at-block">
+          <div class="at-block-label">二 · 择 人 物 身 份</div>
+          <div class="at-id-grid" id="id-grid"></div>
+        </div>
+        <div class="at-scenario-foot">
+          <p class="at-scene-now" id="scene-now">请先选择朝代，再择身份</p>
+          <button class="btn-primary" id="enter-studio" disabled>入 局 裁 衣 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 自由设计 · 工作台 ── -->
+    <div class="view" id="view-free-studio">
+      <div class="at-steps">
+        <span class="at-step done"><span class="n">1</span>择朝代身份</span>
+        <span class="at-step-line"></span>
+        <span class="at-step active"><span class="n">2</span>量体裁衣</span>
+        <span class="at-step-line"></span>
+        <span class="at-step" id="step-card-2"><span class="n">3</span>钤印成卡</span>
+      </div>
+      <div class="at-studio">
+        <aside class="at-preview">
+          <div class="frame">
+            <div class="at-preview-empty" id="pv-empty">未 裁 衣</div>
+            <img class="at-preview-img" id="pv-img" src="" alt="衣身预览">
+          </div>
+          <div class="at-pv-caption" id="pv-caption"></div>
+          <div class="at-pv-name" id="pv-name">&nbsp;</div>
+          <div class="at-pv-list" id="pv-list"></div>
+          <div class="at-pv-foot">
+            <button class="btn-primary" id="btn-finish">✦ 钤 印 成 卡</button>
+          </div>
+        </aside>
+
+        <div class="at-slots" id="free-slots"></div>
+      </div>
+    </div>
+
+    <!-- ── 自由设计 · 结果 ── -->
+    <div class="view" id="view-free-result">
+      <div class="at-steps">
+        <span class="at-step done"><span class="n">1</span>择朝代身份</span>
+        <span class="at-step-line"></span>
+        <span class="at-step done"><span class="n">2</span>量体裁衣</span>
+        <span class="at-step-line"></span>
+        <span class="at-step active"><span class="n">3</span>钤印成卡</span>
+      </div>
+      <div class="at-result-grid">
+        <div>
+          <div class="at-card-wrap"><canvas id="design-card" width="900" height="1280"></canvas></div>
+          <div class="at-card-actions">
+            <a class="btn-outline" id="download-card" download="huafu-design.png">⬇ 保 存 设 计 卡</a>
+          </div>
+        </div>
+        <div class="at-verdict" id="free-verdict"></div>
+      </div>
+      <div class="at-result-foot">
+        <button class="btn-outline" id="btn-tweak">← 再 改 针 线</button>
+        <button class="btn-text" id="btn-reset-free">重择朝代身份</button>
+        <button class="btn-text" id="btn-goto-challenge">去考据挑战练练眼力 →</button>
+      </div>
+    </div>
+
+    <!-- ── 考据挑战 · 出题页 ── -->
+    <div class="view" id="view-challenge-intro">
+      <div class="section-head reveal" style="margin-bottom:30px">
+        <div class="eyebrow">Examination · 尚衣局试</div>
+        <h2 class="section-title" style="font-size:clamp(28px,3.6vw,40px)">历 史 考 据 挑 战</h2>
+        <p class="section-note">随机抽取一位古人，从六槽各四项中为其搭配最合史的服饰。注意干扰项：它们可能来自错误的朝代、错误的身份，甚至是帝王专属的僭越之物。</p>
+      </div>
+      <div class="at-ch-top reveal">
+        <span class="seal square at-ch-seal" style="background:var(--jade);width:88px;height:88px;font-size:26px">尚衣<br>局试</span>
+        <div class="at-ch-ask">
+          <div class="lab">Rules · 考规</div>
+          <p style="margin-top:12px;font-size:15.5px;line-height:2.1;color:var(--ink-text-2);letter-spacing:1px">
+            每题六格：衣身、袖型、颜色、纹样、腰带、配饰，每格四选其一；<br>
+            衣身占 20 分，其余五格各占 16 分，满分 100；交卷后逐格给据、按分评级。
+          </p>
+        </div>
+        <div class="at-ch-actions">
+          <button class="btn-primary" id="btn-draw" style="padding:18px 50px">✦ 抽 签 出 题</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 考据挑战 · 答题 ── -->
+    <div class="view" id="view-challenge-play">
+      <div class="at-ch-top reveal" id="ch-top"></div>
+      <div class="at-ch-grid" id="ch-grid"></div>
+      <div class="at-ch-foot">
+        <span class="at-progress" id="ch-progress">已搭配 0 / 6</span>
+        <button class="btn-primary" id="btn-submit" disabled>交 卷 评 判 →</button>
+      </div>
+    </div>
+
+    <!-- ── 考据挑战 · 结果 ── -->
+    <div class="view" id="view-challenge-result">
+      <div class="at-result-grid">
+        <div>
+          <div class="at-card-wrap"><canvas id="challenge-card" width="900" height="1280"></canvas></div>
+          <div class="at-card-actions">
+            <a class="btn-outline" id="download-challenge-card" download="huafu-kaoju.png">⬇ 保 存 考 据 卡</a>
+          </div>
+        </div>
+        <div class="at-verdict" id="ch-verdict"></div>
+      </div>
+      <div class="at-result-foot">
+        <button class="btn-primary" id="btn-next-challenge">再 抽 一 签 →</button>
+        <button class="btn-text" id="btn-challenge-to-free">去自由设计发挥 →</button>
+      </div>
+    </div>
+
+  </section>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/designer/data.js"></script>
+  <script src="js/designer/engine.js"></script>
+  <script src="js/designer/card.js"></script>
+  <script src="js/designer/designer.js"></script>
+</body>
+</html>
