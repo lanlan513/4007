@@ -34,7 +34,7 @@ router.get('/dynasties/:id', (req, res) => {
 
   const garments = db
     .prepare(
-      `SELECT id, name, gender, category, material, colors, image
+      `SELECT id, name, gender, category, material, form, colors, description, image
        FROM garments WHERE dynasty_id = ? ORDER BY id`
     )
     .all(req.params.id);

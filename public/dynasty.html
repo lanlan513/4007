@@ -6,9 +6,10 @@
   <title>朝代展厅 · 华服千载</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="theme-paper grain">
+<body class="theme-paper grain hall">
   <div id="nav-slot"></div>
 
+  <!-- ── 展厅头图 ── -->
   <header class="page-hero" id="page-hero">
     <div class="page-hero-bg" id="hero-bg"></div>
     <div class="page-hero-inner">
@@ -25,15 +26,66 @@
     </div>
   </header>
 
-  <section class="section">
-    <div class="dynasty-intro reveal" id="d-summary"></div>
+  <!-- ── 朝代切换条（吸顶） ── -->
+  <nav class="hall-switch" id="hall-switch" aria-label="切换朝代展厅"></nav>
 
-    <div class="filter-bar reveal" style="margin-top:64px">
-      <div class="filter-group" id="f-gender">
-        <span class="filter-label">性别</span>
+  <!-- ── 历史背景 ── -->
+  <section class="section hall-section">
+    <div class="section-head reveal">
+      <div class="eyebrow">Background · 历史背景</div>
+      <h2 class="section-title">时 代 掠 影</h2>
+    </div>
+    <div class="bg-layout">
+      <p class="dynasty-intro reveal" id="d-background"></p>
+      <blockquote class="hall-quote reveal reveal-d2">
+        <p id="d-quote"></p>
+        <cite id="d-quote-src"></cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ── 服饰文化 ── -->
+  <section class="section hall-section" style="padding-top:0">
+    <div class="section-head reveal">
+      <div class="eyebrow">Culture · 服饰文化</div>
+      <h2 class="section-title">衣 冠 风 尚</h2>
+    </div>
+    <p class="dynasty-intro reveal" id="d-culture"></p>
+    <div class="culture-grid">
+      <div class="culture-card reveal">
+        <div class="cc-head"><span class="cc-mark">男</span><h3>男子服饰</h3></div>
+        <p id="d-menswear"></p>
       </div>
+      <div class="culture-card reveal reveal-d2">
+        <div class="cc-head"><span class="cc-mark">女</span><h3>女子服饰</h3></div>
+        <p id="d-womenswear"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 镇厅之宝 ── -->
+  <section class="section hall-section" style="padding-top:0" id="feature-section">
+    <div class="section-head reveal">
+      <div class="eyebrow">Highlight · 镇厅之宝</div>
+      <h2 class="section-title">本 朝 撷 英</h2>
+    </div>
+    <div class="feature-card reveal" id="feature-card"></div>
+  </section>
+
+  <!-- ── 分类浏览 ── -->
+  <section class="section hall-section" style="padding-top:0" id="browse">
+    <div class="section-head reveal">
+      <div class="eyebrow">Collection · 厅内导览</div>
+      <h2 class="section-title">藏 品 分 类</h2>
+      <p class="section-note">按类别与服属浏览本朝藏品——礼服、官服、常服各有所陈，点击卡片可入展室细览。</p>
+    </div>
+
+    <div class="filter-bar reveal">
       <div class="filter-group" id="f-cat">
         <span class="filter-label">类别</span>
+      </div>
+      <div class="filter-group" id="f-gender">
+        <span class="filter-label">服属</span>
       </div>
       <span class="result-count" id="result-count"></span>
     </div>
@@ -42,6 +94,24 @@
     <div class="empty" id="empty" style="display:none">
       <span class="seal square">寻<br>珍</span>
       <p>此筛选下暂无藏品</p>
+    </div>
+  </section>
+
+  <!-- ── 展厅导航：上一朝 / 时间轴 / 下一朝 ── -->
+  <section class="section hall-section" style="padding-top:0">
+    <div class="gold-rule"></div>
+    <div class="hall-nav">
+      <a class="btn-ghost" id="prev-d" href="index.html#timeline">← <span id="prev-name">上一朝</span></a>
+      <a class="btn-ghost hall-home" href="index.html#timeline">回 时 间 轴</a>
+      <a class="btn-ghost" id="next-d" href="index.html#timeline"><span id="next-name">下一朝</span> →</a>
+    </div>
+  </section>
+
+  <!-- ── 加载失败 ── -->
+  <section class="section" id="hall-error" style="display:none">
+    <div class="empty">
+      <span class="seal square">迷<br>路</span>
+      <p>未寻得该朝展厅，请返回<a href="index.html#timeline" style="color:var(--cinnabar);text-decoration:underline;text-underline-offset:6px">时间轴</a>重新选择</p>
     </div>
   </section>
 

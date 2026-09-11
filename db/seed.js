@@ -34,6 +34,16 @@ const dynasties = [
     theme: '#476b5f',
     summary:
       '中国服饰制度的奠基时代。西周确立“上衣下裳”与冠冕礼制，服饰成为等级秩序的象征；春秋战国之际，赵武灵王“胡服骑射”开启民族服饰交融，深衣形制盛行，奠定了华夏衣冠的基本格局。',
+    background:
+      '自夏商至两周，青铜文明鼎盛，礼乐制度渐备。西周初年周公制礼作乐，将衣冠纳入国家典章，以服饰别尊卑、序长幼；春秋战国诸侯竞逐、百家争鸣，铁器兴而丝织盛，深衣遍于士庶，赵武灵王“胡服骑射”更开服饰交融之先声。',
+    culture:
+      '先秦确立了华夏衣冠的两大基本形制——上衣下裳与上下连属的深衣，交领右衽、束带系结成为延续三千年的服饰基因。冠冕有等、佩玉有德，十二章纹寄寓天地人伦，服饰自此成为“礼”最直观的物质载体。',
+    menswear:
+      '男子礼服以冕服、玄端为正：玄衣纁裳、头戴冕旒，章纹与旒数皆依身份而减。士人日常着深衣、短袍，束大带、佩玉璜，所谓“君子无故，玉不去身”，举止进退皆有礼度。',
+    womenswear:
+      '贵族女子以曲裾深衣为尚，衣襟绕身层叠、端庄深邃；日常则短襦长裙、腰束丝绦。发式以笄绾髻，饰以玉珈，《诗经》“副笄六珈”之句，正是先秦贵妇雍容仪态的写照。',
+    quote: '黄帝、尧、舜垂衣裳而天下治，盖取诸乾坤。',
+    quote_source: '《周易 · 系辞下》',
     hero: HERO('ancient Chinese pre-Qin era court scene, bronze age ritual vessels, flowing shenyi robes, distant misty mountains'),
   },
   {
@@ -45,6 +55,16 @@ const dynasties = [
     theme: '#8c3a2e',
     summary:
       '大一统帝国的衣冠秩序。秦尚黑、汉尚赤，袍服成为主流，深衣发展出曲裾、直裾两种样式；官服制度初具规模，佩绶、冠帽区分等级。马王堆汉墓出土的素纱襌衣，代表了当时丝织工艺的巅峰。',
+    background:
+      '秦并六国，书同文、车同轨，衣冠服饰亦归于一统；两汉承秦制而加损益，文景之治后丝织业空前繁荣，张骞凿空西域，丝绸之路贯通东西。马王堆汉墓出土的锦衣纱衾，让今人得以亲见两千年前的织造巅峰。',
+    culture:
+      '秦汉以袍服为宗，深衣分化出曲裾、直裾两途。秦尚水德贵黑，汉改火德尚赤；官员冠服、印绶各有等差，服饰的等级标识功能空前强化，“汉官威仪”成为后世冠服制度的重要源头。',
+    menswear:
+      '男子多着直裾袍或曲裾袍，腰束革带、足登履舄。文官戴进贤冠，以冠梁多少分贵贱；武官戴武弁大冠。腰间佩印垂绶，绶的颜色与织法严格对应官阶，一望可知尊卑。',
+    womenswear:
+      '女子以曲裾袍为尚，长裾绕身、行不露足，静立时衣裾曳地如钟。贵族妇女外罩素纱襌衣，轻若烟雾、薄如蝉翼；高髻步摇、额黄眉黛，汉乐府中罗敷的装束正是当时的风尚标杆。',
+    quote: '缃绮为下裙，紫绮为上襦。',
+    quote_source: '汉乐府《陌上桑》',
     hero: HERO('Han dynasty Chinese palace courtyard, vermilion pillars, officials in black and red silk robes, silk curtains in wind'),
   },
   {
@@ -56,6 +76,16 @@ const dynasties = [
     theme: '#6d8a83',
     summary:
       '乱世中的衣冠解放与民族大融合。玄学盛行，士族崇尚“褒衣博带”，大袖衫、杂裾垂髾飘逸若仙；北方游牧民族的袴褶、裲裆传入中原，胡汉服饰互相渗透，为盛唐服饰的开放气象埋下伏笔。',
+    background:
+      '三国鼎立、两晋更替、南北对峙，四百年分裂乱世，亦是思想解放与民族大融合的时代。玄学清谈兴起，士人越名教而任自然；北方游牧民族入主中原，胡服与汉装在碰撞中彼此渗透，孕育着下一个盛世的服饰变革。',
+    culture:
+      '南朝士族尚“褒衣博带”，宽衫大袖、潇洒出尘；北朝则袴褶、裲裆风行，便于骑射行动。佛教东传，石窟造像中的飞天与供养人为服饰注入新的审美意象，南北交融、胡汉互鉴是这一时期最鲜明的特征。',
+    menswear:
+      '士人褒衣博带、大袖翩翩，或散发袒胸、麈尾清谈，以放达任诞为名士风度；北方男子多着袴褶、裲裆，窄袖短衣配大口缚裤。马上英姿与林下风流，并存于同一个时代。',
+    womenswear:
+      '女子上襦下裙，衫袖日趋宽博；杂裾垂髾裙裾裁作三角、飘带飞扬，行步之间如洛神凌波。发髻竞尚高峻，灵蛇髻、飞天髻巧夺天工，金步摇与玉簪珥交相辉映。',
+    quote: '翩若惊鸿，婉若游龙。',
+    quote_source: '曹植《洛神赋》',
     hero: HERO('Wei-Jin period Chinese literati gathering in bamboo grove, wide-sleeved loose robes, flowing ribbons, celadon tones, mist'),
   },
   {
@@ -67,6 +97,16 @@ const dynasties = [
     theme: '#b0702f',
     summary:
       '中国服饰最雍容开放的时代。男子首服幞头、身着圆领缺骻袍，以服色定品阶；女子流行齐胸襦裙，肩披披帛，袒胸装、半臂、胡服并尚，浓丽丰肥、气象万千。丝织印染技艺登峰造极，长安成为世界性的时尚之都。',
+    background:
+      '隋唐再造一统，国力强盛、四夷宾服，长安成为当时世界上最大的国际都会。丝绸之路商旅络绎，胡乐、胡舞、胡服风靡两京；丝织、印染、刺绣技艺登峰造极，开放自信的帝国气象，尽数写在这一时代的衣冠之上。',
+    culture:
+      '唐代服饰兼收并蓄、雍容开放：男子幞头圆领袍成为定制，以服色明辨品阶；女装则襦裙、半臂、披帛层叠搭配，袒领、胡服乃至女着男装并尚。织锦、夹缬、蹙金绣争奇斗艳，长安衣妆引领整个东亚的时尚潮流。',
+    menswear:
+      '男子首服幞头、身着圆领窄袖缺骻袍，腰系銙带、足蹬乌皮靴。三品以上服紫、五品以上服绯，“品色衣”制度使官阶一目了然；这套幞头袍服的组合沿用至明代，成为中国男子服饰的经典范式。',
+    womenswear:
+      '女子以齐胸襦裙为尚，裙腰高束胸际、披帛绕肩，半臂、袒领、间色裙层出不穷。石榴红裙风靡一时，时世妆、花钿、斜红各领风骚，丰腴华美、自信张扬成为大唐女性的审美标志。',
+    quote: '云想衣裳花想容，春风拂槛露华浓。',
+    quote_source: '李白《清平调》',
     hero: HERO('prosperous Tang dynasty Chang-an street scene, noblewomen in high-waisted ruqun dresses with silk pibo shawls, golden light, peonies'),
   },
   {
@@ -78,6 +118,16 @@ const dynasties = [
     theme: '#6f8f9c',
     summary:
       '理性、清雅、瘦硬的服饰美学。受理学影响，服饰趋于拘谨质朴：士人着襕衫、直裰，女子以修长的褙子为尚，配色偏爱天青、牙白等低饱和色。织锦、缂丝工艺精湛，整体风格如宋瓷一般含蓄内敛。',
+    background:
+      '宋代重文轻武，科举大兴、市民经济繁荣，理学兴起深刻塑造了时代审美。汴京与临安的繁华见于《清明上河图》；织锦、缂丝工艺精妙绝伦，服饰风格由唐代的富丽开放转向清雅内敛，如宋瓷般含蓄隽永。',
+    culture:
+      '宋代服饰尚瘦长、尚素雅，受理学影响趋于拘谨质朴。褙子风行朝野，襕衫接续上古衣裳之制；配色偏爱天青、月白、藕荷等低饱和色，去繁就简、以素为绚，开创了与盛唐迥异的另一种美学高峰。',
+    menswear:
+      '士人以襕衫、直裰为常服，圆领大袖、下摆施襕，头戴幞头或东坡巾，气质儒雅从容。官员公服仍为圆领袍，以服色与革带纹饰区分品级，幞头两脚平伸如直尺，是为宋制特色。',
+    womenswear:
+      '女子以褙子为尚，对襟直领、两侧开衩，内配抹胸与长裙，身形修长如弱柳扶风；大礼则着大袖、披霞帔、戴团冠。缠足之风渐起，纤弱婉约成为新的审美取向。',
+    quote: '铺翠冠儿，捻金雪柳，簇带争济楚。',
+    quote_source: '李清照《永遇乐》',
     hero: HERO('Song dynasty Chinese literati garden, scholar in blue-green lanshan robe, slim woman in beige beizi jacket, rain over lotus pond, ru-ware celadon tones'),
   },
   {
@@ -89,6 +139,16 @@ const dynasties = [
     theme: '#3d5a80',
     summary:
       '蒙古入主中原带来的草原风貌。质孙服一色成章、辫线袄便于骑射，皮质的答忽、高耸的罟罟冠极具民族特色；同时元代保留宋金服饰遗制，南北风格并存，织金锦（纳石失）极尽华丽。',
+    background:
+      '蒙古铁骑入主中原，建立起横跨欧亚的大元帝国。草原民族的服饰习俗与中原衣冠制度并行不悖，西域织金工匠络绎东来，纳石失金锦灿烂夺目；南北风格杂糅并存，服饰呈现出雄浑多元的帝国气象。',
+    culture:
+      '元代服饰蒙汉交融：宫廷尚质孙宴服，一色成章、奢华无比；民间则多承宋金遗制。织金锦“纳石失”大量使用，罟罟冠高耸入云，辫线袄便于骑射，草原的豪迈与中原的精工在此合流。',
+    menswear:
+      '蒙古男子多着辫线袄、质孙袍，窄袖束腰、利于鞍马，冬则外罩答忽皮袍，头戴钹笠冠。汉人士庶仍着宋式袍衫，南北服饰并行不悖，各从其俗。',
+    womenswear:
+      '蒙古贵妇头戴罟罟冠，高可二三尺，珠翠雉尾、远望如神人；身着宽大长袍，以织金锦为贵。汉族女子则仍守襦裙旧制，南北风情各异，共同构成元代女装的多元图景。',
+    quote: '要知各位高低处，都在姑姑帽上看。',
+    quote_source: '元人咏罟罟冠诗',
     hero: HERO('Yuan dynasty Mongol court on grassland horizon, nobles in gold brocade jisun robes, high gugu headdresses, cobalt blue sky, horses'),
   },
   {
@@ -100,6 +160,16 @@ const dynasties = [
     theme: '#a63a2a',
     summary:
       '上溯周汉、重整华夏冠服的集大成时代。官服用补子区分文武品级，乌纱帽、忠靖冠各有定制；赐服中的蟒服、飞鱼服华贵非凡；命妇着凤冠霞帔，民间女子穿马面裙，服饰制度之严整为历代之冠。',
+    background:
+      '明太祖驱逐蒙元、恢复中华，诏令衣冠悉如唐宋之制，重建华夏冠服体系。有明一代，服饰制度之严整为历代之冠；江南丝织业极盛，妆花、织金、缂丝技艺炉火纯青，孔府旧藏与定陵出土实物至今光彩照人。',
+    culture:
+      '明代服饰上承周汉唐宋，集历代之大成：官员补服以禽鸟兽纹明辨贵贱，命妇凤冠霞帔华贵非凡；民间袄裙、比甲、披风式样丰富。制度之完备、织绣之精美皆臻极境，“大明衣冠”成为华夏服饰的经典符号。',
+    menswear:
+      '官员公服为盘领补服，胸背补子文禽武兽，头戴乌纱帽、腰束玉带；士人日常着道袍、直身，头戴四方平定巾。蟒服、飞鱼服、斗牛服为皇帝特赐，非有大功不得服，荣宠无比。',
+    womenswear:
+      '命妇礼服为凤冠霞帔、大袖衫，民间女子则以竖领长袄配马面裙为尚，裙襕织金、袄袖宽博，比甲、披风层叠搭配。凤冠霞帔更成为后世婚嫁礼服的经典想象，影响直至近代。',
+    quote: '洪武元年，诏复衣冠如唐制。',
+    quote_source: '《明史 · 舆服志》',
     hero: HERO('Ming dynasty Chinese imperial hall, officials in red round-collar robes with rank badges, phoenix coronet, golden roof tiles, solemn grandeur'),
   },
   {
@@ -111,6 +181,16 @@ const dynasties = [
     theme: '#3b5b7a',
     summary:
       '满族服饰与中原礼制的融合。男子剃发易服，着袍褂、马蹄袖，官员以顶戴花翎与补褂辨等级；皇帝明黄龙袍列十二章纹；旗女穿衬衣、氅衣，后发展为近代旗袍。服饰纹饰繁缛、工艺极尽精巧，成为古代服饰史的终章。',
+    background:
+      '满清入关，颁剃发易服之令，衣冠制度为之一变。满洲骑射服饰与中原礼制深度融合，康乾盛世织造业登峰造极，江宁、苏州、杭州三织造府供御宫廷，服饰纹饰之繁缛精巧达于极致，为中国古代服饰史写下终章。',
+    culture:
+      '清代服饰满汉交融：男子袍褂、马蹄袖、顶戴花翎，皇帝龙袍列十二章纹，官员补褂以禽鸟兽纹辨品级。旗女长袍宽博镶滚，历经演变成为近代旗袍，是中国服饰走向现代的关键一脉。',
+    menswear:
+      '男子剃发垂辫，内着蟒袍、外罩石青补褂，马蹄袖翻掸成礼；顶戴珠色与花翎眼数标定品秩，黄马褂为旷世恩荣。行服、常服、吉服、礼服各有定制，等级森严。',
+    womenswear:
+      '旗女梳两把头、穿花盆底鞋，衬衣氅衣宽博，晚清镶滚多达“十八镶”；汉女仍守袄裙旧制，凤尾裙、百褶裙争艳。清末旗装渐趋收腰合体，开启旗袍时代之先声。',
+    quote: '身上穿着缕金百蝶穿花大红洋缎窄裉袄，外罩五彩刻丝石青银鼠褂。',
+    quote_source: '曹雪芹《红楼梦》',
     hero: HERO('Qing dynasty Chinese imperial court, emperor in bright yellow dragon robe with horse-hoof cuffs, officials in blue surcoats, red pillars, snow'),
   },
 ];
@@ -435,6 +515,12 @@ function init() {
       era TEXT,
       theme TEXT,
       summary TEXT,
+      background TEXT,
+      culture TEXT,
+      menswear TEXT,
+      womenswear TEXT,
+      quote TEXT,
+      quote_source TEXT,
       hero TEXT,
       sort_order INTEGER
     );
@@ -453,8 +539,8 @@ function init() {
   `);
 
   const insD = db.prepare(
-    `INSERT INTO dynasties (id, name, name_en, years, era, theme, summary, hero, sort_order)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
+    `INSERT INTO dynasties (id, name, name_en, years, era, theme, summary, background, culture, menswear, womenswear, quote, quote_source, hero, sort_order)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   );
   const insG = db.prepare(
     `INSERT INTO garments (dynasty_id, name, gender, category, material, form, colors, description, image)
@@ -462,7 +548,11 @@ function init() {
   );
 
   dynasties.forEach((d, i) =>
-    insD.run(d.id, d.name, d.name_en, d.years, d.era, d.theme, d.summary, d.hero, i)
+    insD.run(
+      d.id, d.name, d.name_en, d.years, d.era, d.theme, d.summary,
+      d.background, d.culture, d.menswear, d.womenswear, d.quote, d.quote_source,
+      d.hero, i
+    )
   );
   let count = 0;
   for (const g of garments) {
